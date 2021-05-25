@@ -1,0 +1,13 @@
+<h2 class="mt-4">Editar Categoria</h2>
+<form enctype="multipart/form-data" action="" method="post">
+    <label for="name">Nome</label>
+    <input type="text" name="name" value="<?=$category->getName()?>" id="name" placeholder="Nome da categoria" class="form-control" required>
+    <br>
+    <label for="image">Imagem</label>
+    <input type="file" name="image" accept="image/*" value="<?=$category->getImage()?>" id="image" class="form-control" required>
+    <br>
+    <label for="description">Descrição</label>
+    <textarea name="description" id="description" placeholder="Descrição" class="form-control" required><?=$category->getDescription()?></textarea>
+    <br>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>

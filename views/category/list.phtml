@@ -1,0 +1,41 @@
+<div class="row card-designer">
+    <div class="col">
+        <div class="card p-2">
+            <h2 class="card-title">Lista de Categorias</h2>
+            <div class="table-responsive">
+                <table class="table table-hover table-striped">
+                    <thead class="bg-dark text-white">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Imagem</th>
+                        <th>Ações</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    foreach ($categories as $category)
+                        echo " <tr>        
+                            <td>{$category->getName()}</td>
+                            <td>{$category->getDescription()}</td>
+                            <td><img width='100px' src='{$category->getImage()}' alt='...'></td>
+                            <td>
+                                <a href='/categorias/editar?id={$category->getId()}' class='btn btn-warning btn-sm'>Editar</a>
+                                <a href='/categorias/excluir?id={$category->getId()}' class='btn btn-danger btn-sm'>Excluir</a>
+                            </td>
+                       </tr>
+                "
+                    ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<script>-->
+<!--    function confirmDelete(id) {-->
+<!--        if (confirm('Você tem certeza que quer excluir essa aposta?')) {-->
+<!--            location.href = "/categorias/excluir?id="+id;-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->

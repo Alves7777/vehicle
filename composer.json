@@ -1,0 +1,19 @@
+{
+  "name": "projeto/veiculos",
+  "description": "Projeto elaborado para fins educacionais",
+  "authors": [
+    {
+      "name": "Lucas Alves",
+      "email": "lucas_alves-07@hotmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "require": {
+    "doctrine/orm": "^2.8",
+    "ext-http": "/"
+  }
+}
